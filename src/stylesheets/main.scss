@@ -1,3 +1,402 @@
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+// Import Font Awesome
+//@import "@fortawesome/fontawesome-free/css/all.css";
+
+//font
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/***** FONT ******/
+body{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/***** NAVIGATION BAR STYLES *****/
+nav{
+    
+    background-image: linear-gradient(white 30%, rgb(118, 135, 119)  100%);
+    box-shadow: 0px 2px 5px #777;
+}
+
+nav li{
+    border-right: 2px solid  rgb(118, 135, 119);
+}
+
+nav li:last-child {
+    border-right: 0;
+}
+
+.nav-link{
+    color: rgb(41, 67, 42) !important; 
+    font-size: 1.75em;
+}
+
+.nav-link:hover{
+    color: rgb(93, 125, 94) !important;
+}
+
+.navbar-brand > img:hover{
+    opacity: 80%;
+}
+
+.navbar-nav{
+    margin-left: auto;
+    padding: 5px;
+}
+
+.navbar-nav > li{
+    padding: 5px;
+}
+
+.navbar-nav:last-child{
+    margin-right: 0 !important;
+}
+
+.navbar > .container-fluid > .custom-toggler-icon{
+    background-color: rgb(41, 67, 42);
+    color: white;
+    padding: 5px;
+}
+
+.navbar > .container-fluid > .custom-toggler-icon:hover{
+    opacity: 0.5;
+}
+
+/***** GET AN OFFER BUTTON *****/
+#offerbtn{
+    background-color: rgb(93, 125, 94);
+    color: white;
+    border-radius: 5px;
+    margin: 7px;
+}
+
+#offerbtn:hover{
+    background-color: rgb(118, 135, 119);
+    color: white;
+}
+
+/***** JUMBOTRON STYLES *****/
+.jumbotron{
+    background-image: url("../images/jumbotronpic1.png");
+    width: 100%;
+    background-size: cover;
+}
+
+.jumbotron > .container > .row > .col-sm-4 > .display-4{
+    color: white;
+    text-shadow: 2.5px 2.5px rgb(41, 67, 42);
+}
+
+.jumbotron > .container > .row > .col-sm-4 > .lead{
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+    -webkit-text-stroke: .02em rgb(41, 67, 42); 
+}
+
+.jumbotron > .container > .row > .col > .container > .mb-3 > label{
+    color: rgb(41, 67, 42);
+    font-size: 1.5em;
+    font-weight: 450;
+    padding-left: 3px;    
+}
+
+//FORM
+.form{
+    margin-top: 15px;
+    padding: 5px;
+    box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+    border-radius: 5px;
+
+    //blurred background
+    background-color: rgba(255, 255, 255, 0.30); 
+    backdrop-filter: blur(10px); 
+}
+
+.form > .mb-3 > label{
+    font-size: 1.5em;
+    color: white;
+}
+
+//submit button
+.jumbotron > .container > .row > .col > .modalbutton{
+    padding: 10px;
+    text-align: center;
+}
+
+.jumbotron > .container > .row > .col > .modalbutton > button{
+    background-color: white;
+    color: rgb(41, 67, 42);
+    font-size: 1.5em;
+}
+
+.jumbotron > .container > .row > .col > .modalbutton > button:hover{
+    background-color: rgb(118, 135, 119);
+    color: rgb(41, 67, 42);
+    font-size: 1.5em;
+}
+
+/***** TITLE CARDS *****/
+.howtitle, .advtitle, .testtitle, .selltitle, .faqtitle, .recenttitle{
+    color: white;
+    font-size: 4em;
+    padding: 8px;
+    text-align: center;
+    background-image: linear-gradient(45deg, rgb(41, 67, 42) 5%, white 100%);
+    
+    box-shadow: 0px 2px 5px #777;
+}
+
+/***** HOW IT WORKS STYLES *****/
+.howinfo > .card > p{
+    background-color:rgb(41, 67, 42);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+.howinfo > .card > .card-body > ol > li + li {
+	margin-top: 1rem;
+}
+
+.howinfo > .card > .card-body > ol{
+    text-align: center;
+    justify-content: center;
+}
+
+//odd numbered cards
+.howinfo > .card > .card-body > ol > li {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+    font-weight: 600;
+	background: rgb(118, 135, 119);
+	padding: 1.0rem;
+	border-radius: 1rem;
+	width: calc(100%);
+	box-shadow: 0.25rem 0.25rem 0.75rem rgb(0 0 0 / 0.1);
+}
+
+//numbers on the cards
+.howinfo > .card > .card-body > ol > li::before {
+	counter-increment: list-item;
+	content: counter(list-item);
+	font-size: 3rem;
+	font-weight: 700;
+	width: 2em;
+	height: 2em;
+	background: rgb(41, 67, 42);
+	flex: 0 0 auto;
+	border-radius: 50%;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+//even numbered cards
+.howinfo > .card > .card-body > ol > li:nth-child(even) {
+	flex-direction: row-reverse;
+	background: rgb(93, 125, 94);
+	margin-right: -2rem;
+	margin-left: 2rem;
+}
+
+
+/***** ADVANTAGES STYLES *****/
+.advinfo > .card > .card-body > p{
+    background-color:rgb(41, 67, 42);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.advinfo > .card > .card-body > .container > .row > .col{
+    padding: 15px;
+}
+
+/***** TESTIMONIAL STYLES *****/
+.testinfo{
+    //padding: 10px;
+    padding-bottom: 0;
+}
+
+.testinfo > p{
+    background-color:rgb(41, 67, 42);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+.testinfo > p > button{
+    background-color: rgb(93, 125, 94);
+    color: white;
+    border-radius: 5px;
+}
+
+.testinfo > p > button:hover{
+    background-color: rgb(118, 135, 119);
+    color: white;
+}
+
+#carouselTestimonial > .carousel-item > img{
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.testinfo > #carouselTestimonial > .carousel-inner > .carousel-item > .carousel-caption > p{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgb(41, 67, 42);
+  
+    //blurred background
+    background-color: rgba(255, 255, 255, 0.30); 
+    backdrop-filter: blur(10px); 
+}
+
+ 
+.testinfo > #carouselTestimonial > .carousel-inner > .carousel-item > .carousel-caption > h5{
+    font-size: 1.5em;
+    font-weight: 600;
+    color: white;
+    -webkit-text-stroke: .03em black; 
+}
+
+/***** MAIN SELLING POINT STYLES *****/
+.sellinfo{
+    background-image: url("../images/mainpic.png");
+    width: 100%;
+    background-size: cover;
+    height: 75vh;
+}
+
+.sellinfo > h2{
+    padding: 10px;
+}
+
+.sellinfo > p{
+    font-size: 1.5em;
+    //blurred background
+    background-color: rgba(255, 255, 255, 0.30); 
+    backdrop-filter: blur(10px); 
+    padding: 10px;
+}
+
+.sellinfo > button{
+    font-size: 1.5em;
+}
+
+/***** RECENT PURCHASES STYLES *****/
+.recentinfo{
+    padding: 10px;
+    padding-bottom: 20px;
+}
+
+.recentinfo > p{
+    background-color:rgb(41, 67, 42);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+}
+
+.recentinfo > .container > .row > .col > .card{    
+    box-shadow: 0 0 10px 0 rgba(100, 100, 100, 0.26);
+    margin-top: 10px;
+}
+
+.recentinfo > .container > .row > .col > .card > .card-title{
+    background-color: rgb(118, 135, 119);
+    color: white;
+    margin: 0;
+}
+
+.recentinfo > .container > .row > .col > .card > .card-body{
+    background-image: linear-gradient(rgb(118, 135, 119) 30%, white 100%);
+}
+
+.recentinfo > .container > .row > .col > .card > .card-body > .accordion > .accordion-item > .accordion-header > button{
+    //blurred background
+    background-color: rgba(255, 255, 255, 0.30); 
+    //backdrop-filter: blur(10px); 
+}
+
+/***** FAQ STYLES *****/
+.faqinfo{
+    padding: 20px;
+}
+
+//header collapsed
+.faqinfo > .accordion > .accordion-item > .accordion-header > button{
+    background-image: linear-gradient(45deg, rgb(41, 67, 42) 25%, #d4d4d4 100%);
+    color: white;
+}
+//header expanded
+.faqinfo > .accordion > .accordion-item > .accordion-header > button[aria-expanded="true"]{
+    background-image: linear-gradient(45deg, rgb(41, 67, 42) 25%, #d4d4d4 100%);
+    color: white; 
+}
+
+.faqinfo > .accordion > .accordion-item > .accordion-collapse > .accordion-body{
+    background-color: rgb(118, 135, 119);
+    color: white;
+}
+
+//additional questions button
+.btn-Question > button{
+    background-color: rgb(93, 125, 94);
+    color: white;
+    border-radius: 5px;
+    margin: 7px;
+    margin-top: 15px;
+}
+
+.btn-Question > button:hover{
+    background-color: rgb(118, 135, 119);
+    color: white;
+}
+
+/***** FOOTER STYLES *****/ 
+footer{
+    background-image: linear-gradient(white 30%, rgb(41, 67, 42) 100%);
+    padding: 10px;
+    box-shadow: 0px 0px 5px #777;
+}
+
+footer > .container > .row > .col{
+    border-right: 2px solid rgb(41, 67, 42);
+}
+
+footer > .container > .row > .col:last-child {
+    border-right: 0;
+}
+
+footer > .container > .row > .col > ul > li{
+    list-style-type: none;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+footer > .container > .row > .col > ul > li > a{
+    color: rgb(41, 67, 42) !important;
+    text-decoration: none;
+}
+
+footer > .container > .row > .col > ul > li > a:hover{
+    color: rgb(118, 135, 119) !important;
+}
