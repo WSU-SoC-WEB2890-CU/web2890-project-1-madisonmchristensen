@@ -2,30 +2,686 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Project Starter</title>
+    <title>CarDeal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="index,follow" />
     <meta name="description" content="Project 1" />
 
     <link rel="stylesheet" href="./stylesheets/main.scss" />
+    
   </head>
 
   <body>
     <!-- Your HTML goes here -->
-    <h1 class="display-2 text-center my-5 py-5 mx-auto w-75">
-      <span>
-        WEB 2890:&nbsp;
-        <i class="bi bi-filetype-html text-primary"></i>/ <i class="bi bi-filetype-css text-danger"></i>/
-        <i class="bi bi-filetype-js text-success"></i>
-      </span>
-      <span class="d-block pt-5">
-        <img src="images/logo.svg" alt="logo horizontal" />
-      </span>
-      <span class="d-block py-5">
-        Project 1: The <span class="bg-dark text-light px-5 fw-bold">CarDeal</span> project
-      </span>
-      <a href="_contents.html" class="link-primary">Link to the Contents file</a>
-    </h1>
+
+    <!-- NAVIGATION -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logosmall.png" height="auto" class="img-fluid" alt="logo horizontal" />
+          </a>
+
+          <button class="navbar-toggler custom-toggler-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bi bi-list"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#howid">How It Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#advid">Advantages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testid">Testimonials</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recentid">Recent Purchases</a>
+              </li>
+
+              <button type="button" class="btn" id="offerbtn"  data-bs-target="#formid">Get an Offer</button>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- JUMBOTRON -->
+    <div id="jumbo" class="jumbotron">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <h1 class="display-4">We Buy ANY Car</h1>
+            <p class="lead">Fill out the Form to get your FREE estimate!</p>
+          </div>
+
+          <div class="col">          
+            <!-- CONTACT FORM -->
+            <div class="container form" id="formid">
+
+              <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput0" placeholder="John">
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput0" placeholder="Smith">
+              </div>
+
+              <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
+
+              <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+            </div>
+
+            <!-- FORM BUTTON MODAL -->
+            <div class="modalbutton">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">SUBMIT</button>
+            </div>
+
+            <!-- FORM CONFIRMATION MODAL -->  
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Submission sucessful!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Thank you for submitting! <br> We will get back to you via email within 1-3 business days. </p>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="index.html"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Return to Home</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+     
+    </div>
+
+    <!-- HOW IT WORKS -->
+    <div class="howtitle" id="howid">
+      <h4>How It Works</h4>
+    </div>
+
+    <div class="howinfo">
+      <div class="card">
+        <p>
+          The process of selling your car with Cardeal is easy and straightforward. Our employees will keep you informed
+        so you will understand what happens next.
+        </p>
+        <div class="card-body d-flex">
+
+          <ol class="list-inline mx-auto justify-content-center">
+            <li class="list-inline-item">
+              Step 1: Fill out a form that provides accurate information about your car - i.e., VIN, year, make, model,
+              mileage, condition of car, accidents
+            </li>
+            <li class="list-inline-item">Step 2: Get an instant offer on your car that is good for 7 days.</li>
+            <li class="list-inline-item">Step 3:Provide access to car. Deliver car to closest cardeal location or have us come get it.</li>
+            <li class="list-inline-item">Step 4: Provide title proving your ownership of the vehicle.</li>
+            <li class="list-inline-item">Step 5: Cardeal will inspect your car to verify its condition.</li>
+            <li class="list-inline-item">
+              Step 6: If everything checks out, you can decide if you want to accept the offer. You can go with cash or
+              apply the money to a trade in.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADVANTAGES -->
+    <div class="advtitle" id="advid">
+      <h4>Advantages</h4>
+    </div>
+
+
+    <div class="advinfo">
+      <div class="card">
+        <div class="card-body">
+          <p>
+            If you're like most people, you don't look forward to dealing with a pushy car salesperson. Cardeal offers a
+            better way for you to sell or trade in your. See the following reasons people choose Cardeal.
+          </p>
+
+          <div class="container text-center">
+            <!-- first row -->
+            <div class="row">
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv1.png" class="card-img-top" alt="flags">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Our offers are very competitive; you'll get more money for your car than a standard dealer trade-in.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv2.png" class="card-img-top" alt="smiley face">
+                  <div class="card-body">
+                    <p class="card-text">
+                      We are happy to take off your hands "less-than-perfect" cars that have body damage, mechanical problems, or
+                      excess wear and tear.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv3.png" class="card-img-top" alt="mobile shopping">
+                  <div class="card-body">
+                    <p class="card-text">
+                      We'll buy your car and you aren't required to buy one from us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv4.png" class="card-img-top" alt="cybersecurity">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Avoid getting ripped off by scammers and swindlers. We make the process of selling your car fast, easy and
+                      safe.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- second row -->
+            <div class="row">
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv5.png" class="card-img-top" alt="team meeting">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Cardeal employees are dedicated and professional. This has earned us an A+ BBB rating plus thousands of
+                      reviews from satisfied customers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv6.png" class="card-img-top" alt="roadtrip car">
+                  <div class="card-body">
+                    <p class="card-text">make and model driven on American roads.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv7.png" class="card-img-top" alt="statue of liberty">
+                  <div class="card-body">
+                    <p class="card-text">
+                      We have locations in all 50 states making it easy for you to deliver your car or have us come to you to pick
+                      up your car.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col d-flex align-items-stretch justify-content-cente">
+                <div class="card" style="width: 18rem;">
+                  <img src="images/adv8.png" class="card-img-top" alt="piggy bank">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Cardeal cares about people as much as cars. We have donated over a million meals to Feeding America and Meals
+                      on Wheels.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="testtitle" id="testid">
+      <h4>Testimonials</h4>
+    </div>
+
+    <div class="testinfo">
+    
+      <p>Don't just take our word for it. See what our customers have said.</p>
+
+      <div id="carouselTestimonial" class="carousel slide">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- First Slide -->
+          <div class="carousel-item active">
+            <img src="images/test1.jpg" class="d-block w-100" alt="smiling man profile">
+            <div class="carousel-caption d-none d-md-block">
+              <p>
+                <q
+                  >Honest business. They gave clear explanation every step of their process, even allowing you to be there
+                  during inspection of your vehicle. Safest way to sell a car I have ever experienced.</q
+                >
+              </p>
+              <h5>
+                <br />B. Drake, Billings MT <br />4 stars, March 2020
+              </h5>
+            </div>
+          </div>
+          <!-- Second Slide -->
+          <div class="carousel-item">
+            <img src="images/test2.jpg" class="d-block w-100" alt="smiling woman at beach">
+            <div class="carousel-caption d-none d-md-block">
+              <p>
+                <q
+                  >My experience at Cardeal went very well. The manager was very professional, kind, and completely honest in
+                  making the offer for my vehicle. I would highly recommend Cardeal for anyone selling their vehicle.
+                </q>
+              </p>
+              <h5>
+                <br />M. Hubbard, Phoenix AZ<br />4 stars, May 2021
+              </h5>
+            </div>
+          </div>
+          <!-- Third Slide -->
+          <div class="carousel-item">
+            <img src="images/test3.jpg" class="d-block w-100" alt="smiling man profile black and white">
+            <div class="carousel-caption d-none d-md-block">
+              <p>
+                <q
+                  >WOW! Above and beyond service provided by Cardeal. They provided myself and my wife exceptional service and a
+                  reasonable price for my 2004 Jeep Cherokee. When we are ready to sell another car Cardeal will be our first
+                  option. Thank you Cardeal.</q
+                >
+              </p>
+              <h5>
+                <br />T. Hogan, Alexandria VA<br />5 stars, August 2021
+              </h5>
+            </div>
+          </div>
+          <!-- Fourth Slide -->
+          <div class="carousel-item">
+            <img src="images/test4.jpg" class="d-block w-100" alt="smiling woman surrounded by trees">
+            <div class="carousel-caption d-none d-md-block">
+              <p>
+                <q
+                  >Very pleased. In all honesty I had my doubts it would be this easy to sell my car to anyone let alone Cardeal
+                  or any other online service. But they are on the up and up. I would recommend this site to anyone who wishes
+                  to sell their car quickly. Thank you Cardeal!</q
+                >
+              </p>
+              <h5>
+                <br />H. Furlano, Atlanta GA<br />5 stars, October 2020
+              </h5>
+            </div>
+          </div>
+          <!-- Fifth Slide -->
+          <div class="carousel-item">
+            <img src="images/test5.jpg" class="d-block w-100" alt="smiling woman in sunglasses in front of river">
+            <div class="carousel-caption d-none d-md-block">
+              <p>
+                <q
+                  >They were very prompt and when they gave me a quote they stood behind it. Communication throughout the whole
+                  process was awesome. They picked up my car at my home which was convenient for me since I have three young
+                  kids. My overall experience was great.</q
+                >
+              </p>
+              <h5>
+                <br />A. Moore, Denver CO<br />4 stars, May 2021</h5>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Arrow Buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonial" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <p><button>See More Reviews</button></p>
+
+    </div>
+
+    
+    <!-- MAIN SELLING POINT -->
+    <div class="selltitle">
+      <h4>Main Selling Point</h4>
+    </div>
+
+    <div class="sellinfo">
+      <h2>Why Choose CarDeal??</h2>
+      <p>
+        <strong>CarDeal allows you to continue moving forward.</strong> 
+        <br> Life is busy, so CarDeal allows our customers to share their time 
+        with those they love, instead stressing over what to do with their vehicle. 
+        <br> No time is wasted finding or speaking with picky sellers, instead CarDeal makes it quick and easy. No need 
+        to even leave the comfort of your home.
+      </p>
+        
+      <button type="button" class="btn" id="offerbtn"  data-bs-target="#formid">Get an Offer</button>
+    </div>
+
+    <!-- RECENT PURCHASES -->
+    <div class="recenttitle" id="recentid">
+      <h4>Recent Purchases</h4>
+    </div>
+
+    <div class="recentinfo">
+      
+      <p>Below are some recently purchased cars that you might be interested in with a trade-in.</p>
+      
+      <div class="container text-center">
+        <div class="row">
+          <div class="col d-flex align-items-stretch justify-content-center">
+            <!-- Card 1 -->
+            <div class="card" style="width: 18rem;">
+              <h5 class="card-title">Honda Civic</h5>
+              <img src="images/honda_civic_sedan.png" class="card-img-top" alt="honda civic">
+              <div class="card-body">
+
+                <!-- Accoridion Description -->
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOneD" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Description
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOneD" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        Been my commuter since 2014, stereo replaced with a Boss unit with android auto and apple carplay
+                        along with speakers. Been very reliable but need larger vehicle for growing family.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <ul class="list-group list-group-flush border-top-0">
+                <li class="list-group-item  border-bottom-0">Year: 2013</li>
+                <li class="list-group-item border-bottom-0">Miles: 131,092</li>
+                <li class="list-group-item  border-bottom-0">Price: $7,900</li>
+                <li class="list-group-item border-bottom-0">Full Style: 4dr Sedan Auto LX FWD</li>
+                <li class="list-group-item border-bottom-0">Condition: 3 Stars </li>
+                <li class="list-group-item border-bottom-0">Fuel Economy: 28mpg city, 39mpg hw</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-stretch justify-content-center">
+            <!-- Card 2 -->
+            <div class="card" style="width: 18rem;">
+              <h5 class="card-title">Toyota 4-Runner</h5>
+              <img src="images/toyota_4runner.png" class="card-img-top" alt="Toyota 4-Runner">
+              <div class="card-body">
+
+                 <!-- Accoridion Description -->
+                 <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwoD" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Description
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwoD" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        I am the 2nd owner of this car just under 7 years ago. Original owner was a police officer who
+                        really maintained it well. Reason for selling just upgraded to a 2017 4X4 for future endeavors.If you're looking
+                        for a work horse, this is it.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <ul class="list-group list-group-flush border-top-0">
+                <li class="list-group-item border-bottom-0">Year: 2001</li>
+                <li class="list-group-item border-bottom-0">Miles: 179,000</li>
+                <li class="list-group-item border-bottom-0">Price: $6,500</li>
+                <li class="list-group-item border-bottom-0">Full Style: 4dr SR5 3.4L Auto</li>
+                <li class="list-group-item border-bottom-0">Condition: 4 Stars </li>
+                <li class="list-group-item border-bottom-0">Fuel Economy: 17mpg city, 20mpg hw</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col d-flex align-items-stretch justify-content-center">
+            <!-- Card 3 -->
+            <div class="card" style="width: 18rem;">
+              <h5 class="card-title">Hyundai Elantra</h5>
+              <img src="images/hyundai_elantra.png" class="card-img-top" alt="Hyundai Elantra">
+              <div class="card-body">
+                  <!-- Accoridion Description -->
+                  <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThreeD" aria-expanded="false" aria-controls="flush-collapseOne">
+                          Description
+                        </button>
+                      </h2>
+                      <div id="flush-collapseThreeD" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          Car is in great condition; runs smooth, clean inside and out. Recently completed a tune up, oil
+                          change, replaced all 4 tires.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+              <ul class="list-group list-group-flush border-top-0">
+                <li class="list-group-item border-bottom-0">Year: 2011</li>
+                <li class="list-group-item border-bottom-0">Miles: 113,325</li>
+                <li class="list-group-item border-bottom-0">Price: $6,995</li>
+                <li class="list-group-item border-bottom-0">Full Style: 4dr Sedan Auto GLS</li>
+                <li class="list-group-item border-bottom-0">Condition: 4 Stars </li>
+                <li class="list-group-item border-bottom-0">Fuel Economy: 28mpg city, 38mpg hw</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ -->
+    <div class="faqtitle">
+      <h4>Frequently Asked Questions</h4>
+    </div>
+
+    <div class="faqinfo">
+      <div class="accordion" id="accordionExample">
+        <!-- Question 1 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> 
+              <p><strong>How is Cardeal different from other online car buyers?</strong></p>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Cardeal will buy "any" car even if it has a blown engine. At Cardeal we want to offer the highest value, quick
+                payment for cars, convenience, and a secure transaction. If you sell us your car, you are not obligated to buy
+                your next car from us although we promise that if you do you will get a great deal.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Question 2 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">   
+              <p><strong>How is the price of my car calculated?</strong></p>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>Prices are calculated based on the current market value of your car and its condition.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Question 3 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <p><strong>What costs will I be responsible for?</strong></p>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Cardeal is a free service. There are no charges for evaluations and offers. If you sell a car with Cardeal, we
+                pay for pick up and towing. We have no hidden costs.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Question 4 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> 
+              <p><strong>How quickly can you have my vehicle picked up?</strong></p>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                Cardeal has a branch in every state. Therefore, we can usually pick up your vehicle within 24 to 48 hours after
+                you accept our offer.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Question 5 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <p><strong>What type of documentation will I need to provide?</strong></p>
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                When filling out the online form, you will be asked to enter your Vehicle Identification Number (VIN). A
+                vehicle's VIN contains its year, make, model, trim information and other auto options and details. Cardeal also
+                requires a title in the seller's name. We cannot buy your vehicle without a valid, signed title from the
+                registered vehicle owner.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Question 6 -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              <p><strong>Will you buy my car if I can't get it started?</strong></p>
+            </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                If you have a damaged, wrecked or non-running car on your hands, Cardeal can help you get rid of it. We'll give
+                you a fair market offer for your car that's tailored to your vehicle's conditions and local market demands.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Additional Questions -->
+        <div class="btn-Question  d-flex justify-content-center">
+          <button type="button" class="btn">Additional Questions? Click Here</button>
+        </div> 
+
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container text-center">
+        <div class="row">
+
+          <div class="col-sm-4">
+            <a href="index.html"><img src="images/logo_versmall.png" alt="cardeal logo" />  </a>         
+          </div>
+
+          <div class="col">
+            <p><strong>Contact Us</strong></p>
+            <address>
+              <a href="tel:+12003456789">1-200-345-6789</a><br />
+              345 E Washington Street<br />
+              Phoenix, AZ 85000
+            </address> 
+          </div>
+            
+          <div class="col">
+            <p><strong>Social Media Links</strong></p>
+
+            <ul>
+              <li><a href="#"><i class="fab fa-2x fa-brands fa-facebook" style="color: #49544f;"></i></a>Facebook</li>
+              <li><a href="#"><i class="fab fa-2x fa-brands fa-linkedin" style="color: #49544f;"></i></a>Linked In</li>
+              <li><a href="#"><i class="fab fa-2x fa-brands fa-twitter" style="color: #49544f;"></i></a>Twitter</li>
+              <li><a href="#"><i class="fab fa-2x fa-brands fa-youtube" style="color: #49544f;"></i></a>YouTube</li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <p>
+              <strong>Additional Links</strong>
+            </p>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Branch Locator</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        <span>&copy;</span><span>2024 All rights reserved. <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></span>
+      </p>
+
+    </footer>
 
     <script type="module" src="./javascripts/main.js"></script>
   </body>
